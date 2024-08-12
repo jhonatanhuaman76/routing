@@ -8,12 +8,16 @@ import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { RouterModule, Routes } from '@angular/router';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { CoursesComponent } from './courses/courses.component';
+import { CoursesDetailComponent } from './courses-detail/courses-detail.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'about', component: AboutComponent },
   { path: 'contact', component: ContactComponent },
+  { path: 'courses', component: CoursesComponent },
+  { path: 'courses/:course', component: CoursesDetailComponent },
   { path: '**', component: PageNotFoundComponent }
 ]
 
@@ -23,7 +27,9 @@ const routes: Routes = [
     HomeComponent,
     AboutComponent,
     ContactComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    CoursesComponent,
+    CoursesDetailComponent
   ],
   imports: [
     BrowserModule,
